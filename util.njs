@@ -170,3 +170,16 @@ exports.saveSuccess = function saveSuccess (o) {
 		}).join(',');
 	return str ? ['{', str, '}'].join('') : undefined;
 }
+
+exports.join = join: function (self, obj) {
+	for (var nm in obj)
+		self[nm] = obj[nm];
+	return self;
+}
+
+exports.joiny = joiny: function (self, obj) {
+	for (var nm in obj)
+		if (!(nm in self))
+			self[nm] = obj[nm];
+	return self;
+}
