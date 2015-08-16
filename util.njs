@@ -59,13 +59,13 @@ exports.isNonNegativeNumber = function isNonNegativeNumber (v) {
 	return isNumeric(v) && v >=0;
 };
 
-exports.join = join: function (self, obj) {
+exports.join =  function join (self, obj) {
 	for (var nm in obj)
 		self[nm] = obj[nm];
 	return self;
 };
 
-exports.joiny = joiny: function (self, obj) {
+exports.joiny =  function joiny (self, obj) {
 	for (var nm in obj)
 		if (!(nm in self))
 			self[nm] = obj[nm];
